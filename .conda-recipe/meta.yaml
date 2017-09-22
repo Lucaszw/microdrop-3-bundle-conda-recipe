@@ -1,0 +1,34 @@
+# source will be downloaded prior to filling in jinja templates
+# Example assumes that this folder has setup.py in it
+source:
+  git_url: ../
+
+{% if "GIT_DESCRIBE_NUMBER" not in environ %}
+{% set VERSION_NUMBER = "0+unknown"  %}
+{% elif GIT_DESCRIBE_NUMBER > '0'  %}
+{% set VERSION_NUMBER = GIT_DESCRIBE_TAG[1:] + ".post" + GIT_DESCRIBE_NUMBER %}
+{% else  %}
+{% set VERSION_NUMBER = GIT_DESCRIBE_TAG[1:] %}
+{% endif %}
+
+package:
+  name: microdrop-3-bundle
+  version: {{ VERSION_NUMBER }}
+
+build:
+  number: 0
+
+requirements:
+  run:
+    - microdrop-3
+    - microdrop.device-info-plugin ==0.1
+    - microdrop.droplet-planning-plugin ==2.1
+    - microdrop.protocol-ui-plugin
+    - microdrop.protocol-execution-ui-plugin
+    - microdrop.experiment-ui-plugin
+    - microdrop.device-loader-ui-plugin
+    - microdrop.default-ui-plugins
+
+about:
+  home: https://github.com/sci-bots/microdrop-3.0
+  license: GPL
