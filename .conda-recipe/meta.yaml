@@ -21,8 +21,8 @@ build:
 requirements:
   run:
     - microdrop-3
-    - microdrop.device-info-plugin ==0.1
-    - microdrop.droplet-planning-plugin ==2.1
+    - microdrop.device-info-plugin >=0.1
+    - microdrop.droplet-planning-plugin >=2.1
     - microdrop.protocol-ui-plugin
     - microdrop.protocol-execution-ui-plugin
     - microdrop.experiment-ui-plugin
