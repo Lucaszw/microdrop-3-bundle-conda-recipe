@@ -20,7 +20,7 @@ build:
 
 requirements:
   run:
-    - microdrop-3
+    - microdrop-3-unstable
     - microdrop.device-info-plugin >=0.1
     - microdrop.droplet-planning-plugin >=2.1
     - microdrop.protocol-ui-plugin
