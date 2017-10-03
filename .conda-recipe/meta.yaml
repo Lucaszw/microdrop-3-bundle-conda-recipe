@@ -28,7 +28,7 @@ requirements:
     - microdrop.experiment-ui-plugin
     - microdrop.device-loader-ui-plugin
     - microdrop.default-ui-plugins
-
+    - microdrop.dropbot-ui-plugin
 about:
   home: https://github.com/sci-bots/microdrop-3.0
   license: GPL
